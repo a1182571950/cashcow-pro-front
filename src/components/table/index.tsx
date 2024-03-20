@@ -78,8 +78,8 @@ const setColTitle: Columns = [
     type: "switch",
     align: "center",
     range: [
-      { v: "hidden", t: "隐藏" },
-      { v: "auto", t: "显示" },
+      { v: true, t: "隐藏" },
+      { v: false, t: "显示" },
     ],
   },
 ];
@@ -89,7 +89,7 @@ const defaultCol: Omit<Column, "dataIndex"> = {
   fixed: false,
   ellipsis: false,
   align: "left",
-  hidden: "auto",
+  hidden: false,
 };
 
 interface RowProps extends React.HTMLAttributes<HTMLTableRowElement> {
@@ -277,6 +277,8 @@ function UseTable(columns: Columns, saveKey: MyTableProps["saveKey"]) {
       });
     }
   };
+  console.log(col);
+  
   return {
     col,
     showDrawer,
@@ -315,7 +317,7 @@ function MyTable({
         <MyIcon type="icon_edit" onClick={show} />
       </Row>
       <Table
-        columns={col.filter((i) => i.hidden !== "hidden")}
+        columns={col}
         dataSource={dataSource}
         className={
           className
