@@ -1,16 +1,18 @@
 .login-container {
-  background     : url("@/assets/images/bg.svg");
+  background: url("@/assets/images/bg.svg");
   background-size: cover;
-  height         : 100vh;
-  display        : flex;
-  align-items    : center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
-
+  // padding: 0 15px;
   .wrapper {
     text-align: center;
-
+    max-width: 400px;
+    width: 100%;
+    padding: 0 50px;
     .title {
-      font-size  : 28px;
+      font-size: 42px;
       font-weight: bold;
     }
 
@@ -19,18 +21,16 @@
     }
 
     .login-form {
-      width : 300px;
+      width: 100%;
       margin: 50px auto;
     }
 
-
-
     .btns {
-      display        : flex;
+      display: flex;
       justify-content: space-around;
 
       .ant-form-item-control-input-content {
-        display        : flex;
+        display: flex;
         justify-content: space-between;
       }
 
@@ -47,5 +47,46 @@
     .ant-form-item-explain-error {
       text-align: left;
     }
+
+    .login-form-forgot {
+      float: right;
+    }
+
+    .ant-input-affix-wrapper {
+      font-size: 16px;
+    }
+
+    .login-form-register-box {
+      width: 100%;
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+  .bg {
+    width: 100%;
+    height: 100%;
+    background: url("@/assets/images/login-bg.jpg");
+    background-size: cover;
+    background-position: top;
+    box-shadow: inset -2px 0px 8px rgba(0, 0, 0, 0.5);
+  }
+  @keyframes move {
+    0% {
+      background-position: 0 -100px; /* 初始位置 */
+    }
+    50% {
+      background-position: 0 -300px;
+    }
+    100% {
+      background-position: 0 -100px;
+    }
+  }
+  // .div-class {
+  //   animation: move 20s infinite; /* 应用动画，2s为动画持续时间，infinite表示无限循环 */
+  // }
+}
+@media (max-width: 767px){
+  .bg{
+    display: none;
   }
 }

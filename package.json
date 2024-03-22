@@ -1,5 +1,5 @@
 {
-  "name": "react-ant-admin",
+  "name": "cashcow-pro-front",
   "version": "0.0.0",
   "scripts": {
     "dev": "env-cmd --verbose -e dev vite",

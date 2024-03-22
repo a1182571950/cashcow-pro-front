@@ -28,7 +28,7 @@ function Cfg() {
   const themm = useMemo(() => ({ token }), [token])
   return <ConfigProvider theme={themm}>
     <AppRouter />
-    <LayoutSet />
+    {/* <LayoutSet /> */}
     <Theme />
   </ConfigProvider >
 }

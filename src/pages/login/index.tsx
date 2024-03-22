@@ -52,7 +52,7 @@ function Login() {
   return (
     <div className="login-container" style={{ backgroundColor: token.colorBgContainer }}>
       <div className="wrapper">
-        <div className="title">react-ant-admin</div>
+        <div className="title">订票系统</div>
         <div className="welcome">欢迎使用，请先登录</div>
         <Form
           className="login-form"
@@ -80,6 +80,7 @@ function Login() {
             <Form.Item name="remember" valuePropName="checked" noStyle>
               <Checkbox>记住我</Checkbox>
             </Form.Item>
+            <a className="login-form-forgot" href="">忘记密码</a>
           </Form.Item>
           <Row justify="space-around">
             <Button
@@ -92,8 +93,12 @@ function Login() {
             </Button>
             <Button htmlType="reset">重置</Button>
           </Row>
+          <Row>
+            <div className="login-form-register-box">还没有账号？<a className="login-form-register" href="">马上注册</a> 👉</div>
+          </Row>
         </Form>
       </div>
+      <div className="bg div-class"></div>
     </div>
   );
 }

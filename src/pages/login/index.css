@@ -1,0 +1,78 @@
+.login-container {
+  background: url("@/assets/images/bg.svg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container .wrapper {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  padding: 0 50px;
+}
+.login-container .wrapper .title {
+  font-size: 42px;
+  font-weight: bold;
+}
+.login-container .wrapper .welcome {
+  margin-top: 20px;
+}
+.login-container .wrapper .login-form {
+  width: 100%;
+  margin: 50px auto;
+}
+.login-container .wrapper .btns {
+  display: flex;
+  justify-content: space-around;
+}
+.login-container .wrapper .btns .ant-form-item-control-input-content {
+  display: flex;
+  justify-content: space-between;
+}
+.login-container .wrapper .btns .ant-btn {
+  width: 40%;
+}
+.login-container .wrapper .ant-form label {
+  float: left;
+}
+.login-container .wrapper .ant-form-item-explain-error {
+  text-align: left;
+}
+.login-container .wrapper .login-form-forgot {
+  float: right;
+}
+.login-container .wrapper .ant-input-affix-wrapper {
+  font-size: 16px;
+}
+.login-container .wrapper .login-form-register-box {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+.login-container .bg {
+  width: 100%;
+  height: 100%;
+  background: url("@/assets/images/login-bg.jpg");
+  background-size: cover;
+  background-position: top;
+  box-shadow: inset -2px 0px 8px rgba(0, 0, 0, 0.5);
+}
+@keyframes move {
+  0% {
+    background-position: 0 -100px;
+    /* 初始位置 */
+  }
+  50% {
+    background-position: 0 -300px;
+  }
+  100% {
+    background-position: 0 -100px;
+  }
+}
+@media (max-width: 767px) {
+  .bg {
+    display: none;
+  }
+}
